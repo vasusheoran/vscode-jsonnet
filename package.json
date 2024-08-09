@@ -11,7 +11,7 @@
 		"url": "https://github.com/grafana/vscode-jsonnet"
 	},
 	"engines": {
-		"vscode": "^1.61.0"
+		"vscode": "^1.92.0"
 	},
 	"categories": [
 		"Programming Languages",
@@ -25,9 +25,6 @@
 		"lsp",
 		"language",
 		"debugger"
-	],
-	"activationEvents": [
-		"onLanguage:jsonnet"
 	],
 	"main": "./out/extension",
 	"contributes": {
@@ -190,6 +187,11 @@
 					"description": "External variables to pass to the language server"
 				},
 				"jsonnet.languageServer.extCode": {
+					"scope": "resource",
+					"type": "object",
+					"description": "External Jsonnet Code to pass to the language server"
+				},
+				"jsonnet.languageServer.tlaCode": {
 					"scope": "resource",
 					"type": "object",
 					"description": "External Jsonnet Code to pass to the language server"
