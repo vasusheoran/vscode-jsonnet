@@ -1,5 +1,5 @@
 {
-	"name": "vscode-jsonnet",
+	"name": "vscode-jsonnet-beta",
 	"icon": "icon.png",
 	"displayName": "Jsonnet Language Server (Beta)",
 	"description": "Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet",

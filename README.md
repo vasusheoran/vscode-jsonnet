@@ -18,6 +18,8 @@ https://user-images.githubusercontent.com/29210090/145628481-97b2d6ee-9ef6-4a72-
 
 ## To use this
 
-1. Install the extension from [the VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Grafana.vscode-jsonnet) or [Open VSX](https://open-vsx.org/extension/Grafana/vscode-jsonnet)
+1. Install the extension from [Latest Releases](https://github.com/vasusheoran/vscode-jsonnet/releases)
+2. Go to the Extensions view (View > Extensions or Ctrl+Shift+X).
+3. Click the gear icon in the top right corner and select "Install from VSIX...".
 2. Open a jsonnet file and follow the instructions on screen to download the language server
 3. Enjoy
