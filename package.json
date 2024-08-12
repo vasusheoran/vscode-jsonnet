@@ -1,11 +1,11 @@
 {
 	"name": "vscode-jsonnet",
 	"icon": "icon.png",
-	"displayName": "Jsonnet Language Server (Vasu)",
+	"displayName": "Jsonnet Language Server (Beta)",
 	"description": "Full code support (formatting, highlighting, navigation, debugging etc) for Jsonnet",
 	"license": "Apache License Version 2.0",
 	"publisher": "Grafana",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/grafana/vscode-jsonnet"
@@ -290,7 +290,7 @@
 				},
 				"jsonnet.debugger.releaseRepository": {
 					"type": "string",
-					"default": "grafana/jsonnet-debugger",
+					"default": "vasusheoran/jsonnet-debugger",
 					"description": "Github repository to download the debugger server from"
 				},
 				"jsonnet.debugger.enableAutoUpdate": {
