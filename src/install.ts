@@ -50,7 +50,7 @@ export async function install(
   }
 
   const releaseRepository: string = workspace.getConfiguration('jsonnet').get(`${component}.releaseRepository`);
-
+  
   const binPathExists = fs.existsSync(binPath);
   channel.appendLine(`Binary path is ${binPath} (exists: ${binPathExists})`);
 
@@ -70,12 +70,18 @@ export async function install(
   const releaseUrl = `https://api.github.com/repos/${releaseRepository}/releases/latest`;
   channel.appendLine(`Auto-update is enabled. Fetching latest release from ${releaseUrl}`);
 
-  let releaseData: { name?: string } = {};
+  let releaseData: { name?: string, tag_name?: string } = {};
   let latestVersion = '';
   try {
     const body = await githubApiRequest(releaseUrl);
     releaseData = JSON.parse(body);
-    latestVersion = releaseData.name;
+
+    if (releaseData.name == "") {
+      latestVersion = releaseData.tag_name;
+    } else {
+      latestVersion = releaseData.name;
+    }
+
     if (latestVersion.startsWith('v')) {
       latestVersion = latestVersion.substring(1);
     }

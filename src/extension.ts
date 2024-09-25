@@ -28,7 +28,7 @@ import {
   ServerOptions,
 } from 'vscode-languageclient/node';
 import { install } from './install';
-import { JsonnetDebugAdapterDescriptorFactory } from './debugger';
+import { JsonnetDebugAdapterDescriptorFactory, Mode } from './debugger';
 
 let extensionContext: ExtensionContext;
 let client: LanguageClient;
@@ -170,7 +170,7 @@ async function installDebugger(context: ExtensionContext): Promise<void> {
   if (!binPath) {
     return;
   }
-  debug.registerDebugAdapterDescriptorFactory('jsonnet', new JsonnetDebugAdapterDescriptorFactory(context, binPath));
+  debug.registerDebugAdapterDescriptorFactory('jsonnet', new JsonnetDebugAdapterDescriptorFactory(context, binPath, channel, Mode.STDIO));
 }
 
 async function startClient(): Promise<void> {
